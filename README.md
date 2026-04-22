@@ -64,3 +64,17 @@ Paid 250.0 via Card.
 Amount: 250.0, Status: PAID
 Amount: 250.0, Status: SHIPPED
 ```
+
+# Collections - ArrayList, HashSet
+# Concepts Covered
+  - Dynamic arrays using ArrayList
+  - Set behavior using HashSet (no duplicates)
+  - Time complexity and performance differences
+  - Internal working (resizing, hashing)
+
+# Implementations
+  - Adding, removing, and accessing elements
+  - Handling duplicates
+  - Iteration techniques
+  - Real-world use cases and edge cases
+
