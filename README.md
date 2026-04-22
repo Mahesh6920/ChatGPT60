@@ -1,25 +1,25 @@
-🚀 60 Days Backend Mastery Challenge (Java)
+# 🚀 60 Days Backend Mastery Challenge (Java)
 
 This repository documents my 60-day journey to master backend development using Java.
 
-#Day 1
+# Day 1
 🔥 What I'm Doing
-Building backend concepts from scratch
-Writing clean, structured, and scalable code
-Solving real-world problems through mini projects
-📚 Topics Covered
-Java (OOP, Collections, Exception Handling)
-Data Structures & Problem Solving
-Backend Fundamentals (APIs, Design Patterns)
-Database Integration (SQL)
-🎯 Goal
-
+  - Building backend concepts from scratch
+  - Writing clean, structured, and scalable code
+  - Solving real-world problems through mini projects
+    
+# 📚 Topics Covered
+  - Java (OOP, Collections, Exception Handling)
+  - Data Structures & Problem Solving
+  - Backend Fundamentals (APIs, Design Patterns)
+  - Database Integration (SQL)
+    
+# 🎯 Goal
 To become a job-ready backend developer by focusing on consistency, practical implementation, and strong fundamentals.
 
-📅 Progress
+# 📅 Progress
 
 Daily commits with code, explanations, and improvements.
-
 
 ## Day 2 - Payment System (OOP Practice)
 
@@ -77,4 +77,44 @@ Amount: 250.0, Status: SHIPPED
   - Handling duplicates
   - Iteration techniques
   - Real-world use cases and edge cases
+
+# Day 3: User Storage System
+
+A simple backend-focused project demonstrating the practical use of ArrayList and HashSet from the Java Collections Framework.
+
+# Objective
+
+To understand how to efficiently manage user data while preventing duplicates using appropriate data structures.
+
+# Key Concepts
+  - ArrayList for ordered data storage
+  - HashSet for fast lookup and duplicate prevention
+  - Time complexity optimization (O(1) vs O(n))
+  - Separation of concerns (data storage vs validation)
+
+# Features
+  - Add users with unique email validation
+  - Prevent duplicate entries using HashSet
+  - Maintain insertion order using ArrayList
+  - Display all stored users
+
+# How It Works
+  - Users are stored in a List for ordered access
+  - Emails are stored in a Set for constant-time duplicate checks
+  - Before adding a user, the system checks if the email already exists
+    
+# Example
+Add: a@gmail.com → Added
+Add: a@gmail.com → Rejected (duplicate)
+
+# Output
+```
+User added
+User added
+User added
+mahi -> mahi@gmail.com
+ravi -> ravi@gmail.com
+siva -> siva@gmail.com
+Invalid user details
+```
 
