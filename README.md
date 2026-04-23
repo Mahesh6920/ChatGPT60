@@ -118,3 +118,23 @@ siva -> siva@gmail.com
 Invalid user details
 ```
 
+## Day 4 - User Lookup System (HashMap + HashSet)
+
+This module implements a simple user management system using Java Collections Framework.
+
+### Concepts Covered
+- HashMap for storing users with unique IDs
+- HashSet for enforcing unique email constraints
+- Basic CRUD operations (Add, Fetch, Delete)
+- Input validation using constructors and regex
+
+### Features
+- Add users with unique ID and email
+- Prevent duplicate email entries
+- Retrieve user details by ID
+- Delete users and maintain data consistency
+
+### Example Workflow
+- Add user with ID and email
+- Fetch user using ID
+- Delete user and verify removal
