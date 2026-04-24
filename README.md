@@ -154,3 +154,19 @@ This module demonstrates the internal working of a HashMap by building a custom 
 - Each bucket stores a linked list of nodes
 - On collision, new entries are appended to the list
 - Retrieval and deletion traverse the chain to find the key
+
+## Custom LinkedList Implementation (Java)
+
+This module demonstrates the implementation of a singly linked list from scratch using a custom Node structure.
+
+### Concepts Covered
+- Node-based data structure design
+- Dynamic memory linking using pointers (references)
+- Traversal of linked list
+- Basic operations on linked list
+
+### Features
+- Convert an array into a linked list
+- Traverse and print elements
+- Calculate length of the linked list
+- Delete the head node
