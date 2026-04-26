@@ -174,22 +174,38 @@ This module demonstrates the implementation of a singly linked list from scratch
 ## Doubly Linked List Implementation in Java
 
 ### 📌 Overview
-This project demonstrates a basic implementation of a **Doubly Linked List (DLL)** in Java from scratch.
+This project demonstrates a custom implementation of a **Doubly Linked List (DLL)** in Java without using built-in collections.
 
-The goal is to understand how nodes are connected in both directions and how common operations are performed without using Java's built-in collections.
+The objective is to understand how bidirectional node connections work internally and how common operations are performed efficiently using references.
 
 ### ⚙️ Features Implemented
 - Convert Array → Doubly Linked List
-- Print the Linked List
+- Traverse and Print the List
 - Delete Head Node
 - Delete Tail Node
+- Delete Node by Value
+- Delete Node by Position (Kth Node)
 - Find Length of the List
+- Check if an element exists (search)
 
 ### 🧠 Core Concepts
 
-A **Doubly Linked List** is a linear data structure where each node contains:
-- Data
-- Pointer to next node
-- Pointer to previous node
+A **Doubly Linked List** consists of nodes where each node contains:
+- `data` → stores the value
+- `next` → points to the next node
+- `back` → points to the previous node
 
-This allows traversal in both directions.
+This enables:
+- Forward traversal (head → tail)
+- Backward traversal (tail → head)
+
+---
+### ⏱️ Time Complexity
+
+| Operation            | Time Complexity |
+|---------------------|----------------|
+| Insert (end)        | O(n)           |
+| Search              | O(n)           |
+| Delete (head/tail)  | O(1) / O(n)    |
+| Delete (middle)     | O(n)           |
+---
