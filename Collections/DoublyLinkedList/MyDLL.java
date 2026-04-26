@@ -70,4 +70,87 @@ public class MyDLL {
 		
 		return c;
 	}
+	
+	public Node deleteKthElement(int k, Node head) {
+		
+		if (contains(k, head)) {
+			Node temp = head;
+			
+			while (temp != null) {
+				if (temp.data == k) break;
+				
+				temp = temp.next;
+			}
+			
+			
+			
+			Node prev = temp.back;
+			Node next = temp.next;
+			
+			if (prev == null) {
+				return deleteHead(head);
+			} else if (next == null) {
+				return deleteTail(head);
+			} else {
+				temp.back.next = temp.next;
+				temp.next.back = temp.back;
+				
+				temp.back = null;
+				temp.next = null;
+				
+				return head;
+			}
+		}
+		
+		return head;
+	}
+	
+	public boolean contains(int k, Node head) {
+		
+		Node temp = head;
+		
+		while (temp != null) {
+			if (temp.data == k) {
+				return true;
+			}
+			temp = temp.next;
+		}
+		
+		return false;
+	}
+	
+	public Node deleteKthNode(int n, Node head) {
+		
+		if (length(head) >= n) {
+			if (n == 1) {
+				return deleteHead(head);
+			} else if (n == length(head)) {
+				return deleteTail(head);
+			}
+			
+			Node temp = head;
+			int c = 2;
+			
+			while (temp != null) {
+				if (c == n) break;
+				
+				c++;
+				
+				temp = temp.next;
+			}
+			
+			Node prev = temp.back;
+			Node next = temp.next;
+			
+			prev.next = next;
+			next.back = prev;
+			
+			temp.next = null;
+			temp.back = null;
+			
+			return head;
+		}
+		
+		return head;
+	}
 }
