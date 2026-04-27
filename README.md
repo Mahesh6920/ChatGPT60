@@ -264,10 +264,13 @@ This is NOT production-ready. Here’s what’s missing:
 
 ❌ 1. No Thread Safety
   - Not safe for concurrent systems
+    
 ❌ 2. No Capacity Update
   - Capacity is fixed after initialization
+    
 ❌ 3. No Generic Support
   - Works only with integers
+    
 ❌ 4. No Error Handling
    -Silent failures (bad practice)
 ---
