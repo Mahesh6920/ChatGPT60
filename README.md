@@ -20,6 +20,7 @@ To become a job-ready backend developer by focusing on consistency, practical im
 ### 📅 Progress
 
 Daily commits with code, explanations, and improvements.
+---
 
 ## Day 2 - Payment System (OOP Practice)
 
@@ -41,6 +42,7 @@ This module demonstrates core Object-Oriented Programming concepts in Java using
 - Card payment processing
 
 This is part of my 60-day backend development challenge to strengthen Java fundamentals.
+---
 
 ## Order Processing System (Java – OOP Based)
 
@@ -77,6 +79,7 @@ Amount: 250.0, Status: SHIPPED
   - Handling duplicates
   - Iteration techniques
   - Real-world use cases and edge cases
+---
 
 ## Day 3: User Storage System
 
@@ -117,6 +120,7 @@ ravi -> ravi@gmail.com
 siva -> siva@gmail.com
 Invalid user details
 ```
+---
 
 ## Day 4 - User Lookup System (HashMap + HashSet)
 
@@ -138,6 +142,7 @@ This module implements a simple user management system using Java Collections Fr
 - Add user with ID and email
 - Fetch user using ID
 - Delete user and verify removal
+---
 
 ## Day 5 - Custom HashMap Implementation (Java)
 
@@ -170,6 +175,7 @@ This module demonstrates the implementation of a singly linked list from scratch
 - Traverse and print elements
 - Calculate length of the linked list
 - Delete the head node
+---
 
 ## Doubly Linked List Implementation in Java
 
@@ -208,4 +214,60 @@ This enables:
 | Search              | O(n)           |
 | Delete (head/tail)  | O(1) / O(n)    |
 | Delete (middle)     | O(n)           |
+---
+
+# 🚀Day 6: LRU Cache Implementation in Java
+
+## 📌 Overview
+This project implements an **LRU (Least Recently Used) Cache** using:
+
+- HashMap (O(1) lookup)
+- Doubly Linked List (O(1) insertion & deletion)
+
+The goal is to achieve **O(1) time complexity** for both `get()` and `put()` operations — a common requirement in backend systems and interviews.
+---
+
+## 🧠 Problem Statement
+
+Design a data structure that follows the constraints of an LRU Cache:
+
+- `get(key)` → Returns value if exists, else -1
+- `put(key, value)` → Insert/update key
+- When capacity is exceeded → remove least recently used item
+
+---
+
+## ⚙️ Approach
+
+This implementation combines:
+
+### 1. HashMap
+Stores key → node mapping for fast access
+
+### 2. Doubly Linked List
+Maintains usage order:
+- Most Recently Used → near head
+- Least Recently Used → near tail
+
+---
+
+## 🏗️ Internal Design
+Head <-> Node1 <-> Node2 <-> ... <-> Tail
+
+- `head` → dummy node (MRU side)
+- `tail` → dummy node (LRU side)
+---
+
+## ⚠️ Limitations / Issues
+
+This is NOT production-ready. Here’s what’s missing:
+
+❌ 1. No Thread Safety
+  - Not safe for concurrent systems
+❌ 2. No Capacity Update
+  - Capacity is fixed after initialization
+❌ 3. No Generic Support
+  - Works only with integers
+❌ 4. No Error Handling
+   -Silent failures (bad practice)
 ---
