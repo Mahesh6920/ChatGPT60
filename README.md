@@ -273,4 +273,5 @@ This is NOT production-ready. Here’s what’s missing:
     
 ❌ 4. No Error Handling
    -Silent failures (bad practice)
+
 ---
