@@ -264,3 +264,75 @@ Works only with integers
 
 ---
 
+## 🚀 Day7: Java Multithreading Basics 
+
+### 📌 Overview
+This project demonstrates fundamental concepts of **multithreading in Java**, including:
+
+- Creating threads using `Runnable`
+- Thread execution behavior (non-deterministic output)
+- Synchronization and thread safety using locks
+
+---
+
+### 🧠 Concepts Covered
+
+#### 1. Thread Creation
+Using `Runnable` interface and `Thread` class
+
+#### 2. Thread Scheduling
+Understanding that thread execution order is **not guaranteed**
+
+#### 3. Synchronization
+Preventing race conditions using:
+- `synchronized` keyword
+- `ReentrantLock`
+
+---
+
+## 🧪 Task 1: Concurrent Number Printing
+
+### 📌 Objective
+Print numbers from:
+- Thread 1 → 1 to 5  
+- Thread 2 → 6 to 10  
+
+Both threads run simultaneously.
+
+---
+
+### ⚙️ Implementation
+
+```java id="1a9kdl"
+Thread t1 = new Thread(new PrintNum1to5());
+Thread t2 = new Thread(new PrintNum6to10());
+
+t1.start();
+t2.start();
+```
+#### 📤 Output:
+```
+6 1 7 2 8 3 4 9 5 10
+```
+
+## 🧪 Task 2: Thread-Safe Counter
+
+### 📌 Objective
+Increment a shared counter using multiple threads safely.
+
+#### 📤 Output
+```
+Final Count: 2000
+```
+
+## ⚡ Concepts Breakdown
+
+| Concept          | Explanation                                                |
+|------------------|------------------------------------------------------------|
+| Race Condition   | Multiple threads accessing/modifying shared data unsafely  |
+| Synchronization  | Restricting access so only one thread enters critical code |
+| Locking          | Explicit control over thread access using ReentrantLock    |
+| join()           | Forces main thread to wait until other threads finish      |
+
+---
+
