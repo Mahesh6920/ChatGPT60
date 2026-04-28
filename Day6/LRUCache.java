@@ -20,7 +20,7 @@ public class LRUCache {
 		tail.setPrev(head);
 	}
 	
-	public int get(int key) {
+	public synchronized int get(int key) {
 		
 		if (mp.containsKey(key)) {
 			Node node = mp.get(key);
@@ -36,7 +36,7 @@ public class LRUCache {
 	}
 	
 	
-	public void put(int key, int value) {
+	public synchronized void put(int key, int value) {
 		if (capacity == 0) return;
 		
 		Node node = mp.get(key);
