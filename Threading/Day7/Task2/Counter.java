@@ -7,8 +7,9 @@ public class Counter {
 	private int count = 0;
 	private ReentrantLock lock = new ReentrantLock();
 	
-	synchronized void increment() {
+	public synchronized void increment() {
 		lock.lock();
+		
 		try {
 			count++;
 		} finally {

@@ -3,9 +3,10 @@ package Threading.Day7.Task2;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		Counter c = new Counter();
 		
-		Thread t1 = new Thread(()-> {
+		Thread t1 = new Thread(() -> {
 			for (int i=0; i<1000; i++) {
 				c.increment();
 			}
@@ -22,13 +23,11 @@ public class Main {
 		
 		try {
 			t1.join();
-			t2.join();
+			t2.join();		
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		
 		System.out.println("Final Count: " + c.getCount());
-
 	}
-
 }

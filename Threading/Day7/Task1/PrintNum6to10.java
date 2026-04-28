@@ -6,7 +6,7 @@ public class PrintNum6to10 implements Runnable {
 	public void run() {
 		try {
 			for (int i=6; i<=10; i++) {
-				System.out.print(" " + i + " ");
+				System.out.print(i + " ");
 				Thread.sleep(200);
 			}
 		} catch (InterruptedException e) {
