@@ -205,11 +205,12 @@ Backward traversal (tail → head)
 ### ⏱️ Time Complexity
 Operation	Time Complexity
 
-| Insert (end)    	 |   O(n)       |
-| Search             |	O(n)        |
-| Delete (head/tail) |	O(1) / O(n) |
-| Delete (middle)	   | O(n)         |
--------------------------------------
+| Operation             | Time Complexity |
+|-----------------------|-----------------|
+| Insert (end)          | O(n)            |
+| Search                | O(n)            |
+| Delete (head/tail)    | O(1) / O(n)     |
+| Delete (middle)       | O(n)            |
 
 --- 
 
