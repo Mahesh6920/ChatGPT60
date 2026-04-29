@@ -2,12 +2,15 @@ package Day6;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class LRUCache {
 
 	Map<Integer, Node> mp;
 	int capacity;
 	Node head, tail;
+	
+	private ReentrantLock lock = new ReentrantLock();
 	
 	public LRUCache(int capacity) {
 		this.capacity = capacity;
@@ -20,15 +23,19 @@ public class LRUCache {
 		tail.setPrev(head);
 	}
 	
-	public synchronized int get(int key) {
-		
-		if (mp.containsKey(key)) {
-			Node node = mp.get(key);
-			
-			deleteNode(node);
-			insertAfterHead(node);
-			
-			return node.getValue();
+	public int get(int key) {
+		lock.lock();
+		try {
+			if (mp.containsKey(key)) {
+				Node node = mp.get(key);
+				
+				deleteNode(node);
+				insertAfterHead(node);
+				
+				return node.getValue();
+			}
+		} finally {
+			lock.unlock();
 		}
 		
 		
@@ -36,30 +43,35 @@ public class LRUCache {
 	}
 	
 	
-	public synchronized void put(int key, int value) {
+	public void put(int key, int value) {
 		if (capacity == 0) return;
 		
-		Node node = mp.get(key);
-		if (node != null) {
-			
-			node.setValue(value);
-			
-			deleteNode(node);
-			insertAfterHead(node);
-			
-		} else {
-			if (capacity == 0) return;
+		lock.lock();
+		try {
+			Node node = mp.get(key);
+			if (node != null) {
 				
-			if (mp.size() == capacity) {
-				Node lru = tail.getPrev();
-				mp.remove(lru.getKey());
-				deleteNode(lru);
+				node.setValue(value);
+				
+				deleteNode(node);
+				insertAfterHead(node);
+				
+			} else {
+				if (capacity == 0) return;
+					
+				if (mp.size() == capacity) {
+					Node lru = tail.getPrev();
+					mp.remove(lru.getKey());
+					deleteNode(lru);
+				}
+				
+				Node newNode = new Node(key, value); 
+				mp.put(key, newNode);
+				
+				insertAfterHead(newNode);
 			}
-			
-			Node newNode = new Node(key, value); 
-			mp.put(key, newNode);
-			
-			insertAfterHead(newNode);
+		} finally {
+			lock.unlock();
 		}
 	}
 	
