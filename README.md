@@ -336,3 +336,13 @@ Final Count: 2000
 
 ---
 
+## 🚀Day 8: Thread-Safe LRU Cache in Java
+
+### 📌 Overview
+This project implements a **thread-safe LRU (Least Recently Used) Cache** using:
+
+- HashMap for O(1) access
+- Doubly Linked List for maintaining usage order
+- `synchronized` methods for thread safety
+
+The cache supports concurrent access while ensuring data consistency.
