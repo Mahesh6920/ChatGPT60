@@ -346,3 +346,34 @@ This project implements a **thread-safe LRU (Least Recently Used) Cache** using:
 - `synchronized` methods for thread safety
 
 The cache supports concurrent access while ensuring data consistency.
+
+---
+
+## 🚀 Multithreading with ExecutorService (Thread Pool) – Day 7
+
+### 📌 Overview
+This project demonstrates how to use **ExecutorService (Thread Pool)** in Java to manage and execute multiple tasks efficiently.
+
+Instead of manually creating threads, a fixed thread pool is used to:
+- Control the number of concurrent threads
+- Reuse threads
+- Improve performance and resource management
+
+---
+
+### 🧠 Problem Statement
+
+Simulate a file downloading system where:
+- A large task is divided into smaller chunks
+- Each chunk is processed by a thread
+- Tasks are executed concurrently using a thread pool
+
+---
+
+### ⚙️ Approach
+
+#### 1. Thread Pool
+Using:
+```java
+ExecutorService executor = Executors.newFixedThreadPool(3);
+```
